@@ -10,6 +10,7 @@ function Home() {
     <div className="max-w-7xl mx-auto px-6 py-16">
 
   {/* HERO */}
+  
   <div className="mb-16">
     <h1 className="text-5xl font-bold leading-tight mb-4">
       Elevate Your Space with <span className="text-gray-400">Handmade Sketches</span>
