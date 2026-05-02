@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="bg-gradient-to-b from-black via-gray-950 to-black min-h-screen text-white">
       <Navbar />
-
+    
   
 
 <Routes>
