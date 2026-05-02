@@ -1,12 +1,12 @@
 import Navbar from "./components/layout/Navbar";
-import Footer from "./components/layout/footer";
+import Footer from "./components/layout/Footer";
 
 import { Routes, Route } from "react-router-dom";
 
 import Home from "./pages/Home";
 import ProductDetails from "./pages/ProductDetails";
 import Cart from "./pages/Cart";
-  import Shop from "./pages/shop";
+  import Shop from "./pages/Shop";
 
 function App() {
   return (
