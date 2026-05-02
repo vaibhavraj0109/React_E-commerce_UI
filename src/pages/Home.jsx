@@ -1,4 +1,4 @@
-import ProductGrid from "../components/product/ProductGrid";
+import ProductGrid from "../components/Product/ProductGrid";
 
 function Home() {
   const products = [
