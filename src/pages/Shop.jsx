@@ -1,4 +1,4 @@
-import ProductGrid from "../components/product/ProductGrid";
+import ProductGrid from "../components/Product/ProductGrid";
 import FiltersSidebar from "../components/shop/FiltersSidebar";
 import SortBar from "../components/shop/SortBar";
 
