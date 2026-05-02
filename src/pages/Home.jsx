@@ -5,7 +5,7 @@ function Home() {
     { id: 1, title: "Sketch Portrait", price: 499, image: "https://picsum.photos/200?1" },
     { id: 2, title: "Realistic Art", price: 799, image: "https://picsum.photos/200?2" },
   ];
-
+ 
   return (
     <div className="max-w-7xl mx-auto px-6 py-16">
 
