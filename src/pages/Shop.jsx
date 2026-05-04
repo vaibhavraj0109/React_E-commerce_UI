@@ -15,7 +15,7 @@ function Shop() {
       <FiltersSidebar />
 
       <div className="flex-1">
-        <SortBar />
+       <SortBar title="Our Collection" onSort={(value) => console.log("Sort by:", value)} />
         <ProductGrid products={products} />
       </div>
     </div>
