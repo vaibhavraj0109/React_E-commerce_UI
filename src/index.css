@@ -1,3 +1,153 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Custom responsive utilities */
+@layer utilities {
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Better touch targets on mobile */
+  @media (max-width: 640px) {
+    button, 
+    a,
+    input,
+    select,
+    [role="button"] {
+      min-height: 44px; /* Apple's recommended touch target size */
+    }
+  }
+  
+  /* Prevent horizontal scroll on mobile */
+  body {
+    overflow-x: hidden;
+    width: 100%;
+  }
+  
+  /* Responsive container padding */
+  .container-padding {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  @media (min-width: 640px) {
+    .container-padding {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .container-padding {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+}
+
+/* Responsive typography */
+@media (max-width: 640px) {
+  h1 {
+    font-size: 2rem !important;
+  }
+  h2 {
+    font-size: 1.5rem !important;
+  }
+}
+
+/* Hide scrollbar but keep functionality (optional) */
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+/* Extra small screens (up to 480px) */
+@media (max-width: 480px) {
+  .container-padding {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+  
+  /* Better touch targets */
+  button, 
+  a, 
+  [role="button"],
+  input,
+  select {
+    min-height: 44px;
+  }
+}
+
+/* Tablet landscape (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .tablet-grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Large screens optimization */
+@media (min-width: 1440px) {
+  .max-w-7xl {
+    max-width: 1280px;
+  }
+}
+
+/* Responsive images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Prevent text overflow */
+.break-words {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Responsive font sizes with clamp */
+.responsive-heading {
+  font-size: clamp(1.5rem, 5vw, 3rem);
+}
+
+.responsive-text {
+  font-size: clamp(0.875rem, 4vw, 1rem);
+}
+
+/* Touch-friendly hover states (remove on mobile) */
+@media (hover: hover) {
+  button:hover {
+    transform: translateY(-1px);
+  }
+}
+
+@media (hover: none) {
+  button:active {
+    transform: scale(0.98);
+  }
+}
+
+/* Smooth transitions */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Loading skeleton animation */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.skeleton {
+  background: linear-gradient(90deg, #1a1a1a 25%, #2a2a2a 50%, #1a1a1a 75%);
+  background-size: 1000px 100%;
+  animation: shimmer 2s infinite;
+}
